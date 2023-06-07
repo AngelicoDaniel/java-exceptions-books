@@ -12,4 +12,22 @@ class Book {
         this.author = author;
         this.publisher = publisher;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getNumPages() {
+        return numPages;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    
 }
