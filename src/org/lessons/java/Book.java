@@ -7,7 +7,7 @@ class Book {
     private String publisher;
 
     public Book(String title, int numPages, String author, String publisher) {
-        if (title != null && numPages > 0 && author != null && publisher != null) {
+        if ((title != null && !title.isEmpty()) && numPages > 0 && (author != null && !author.isEmpty()) && (publisher != null && !publisher.isEmpty())) {
             this.title = title;
             this.numPages = numPages;
             this.author = author;
@@ -44,7 +44,7 @@ class Book {
     }
 
     public void setAuthor(String author) {
-        if (author == null) {
+        if (author == null || author.isEmpty()) {
             throw new IllegalArgumentException("L'autore non può essere vuoto");
         }
         this.author = author;
@@ -55,7 +55,7 @@ class Book {
     }
 
     public void setPublisher(String publisher) {
-        if (publisher == null) {
+        if (publisher == null || publisher.isEmpty()) {
             throw new IllegalArgumentException("L'editore non può essere vuoto");
         }
         this.publisher = publisher;
